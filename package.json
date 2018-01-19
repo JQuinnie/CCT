@@ -9,6 +9,7 @@
     "express-handlebars": "^3.0.0",
     "handlebars": "^4.0.11",
     "mysql": "^2.15.0",
+    "mysql2": "^1.5.1",
     "sequelize": "^4.31.2",
     "sequelize-cli": "^3.2.0"
   },

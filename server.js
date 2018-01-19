@@ -6,11 +6,18 @@ const bodyParser = require('body-parser');
 const app = express();
 const PORT = process.env.PORT || 4000;
 
+// Requiring mdoels for syncing
+var db = require('./models');
+
 // Sets up the Express app to handle data parsing
-app.use(bodyParser.urlencoded({
-  extended: false
-}));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(bodyParser.text());
+app.use(bodyParser.json({
+  type: "application/vnd.api+json"
+}));
 
 // Sets up Express to use handlebars
 const exphbs = require('express-handlebars');
@@ -19,17 +26,21 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine', 'handlebars');
 
-// Sets up routes
-// // const routes = require('./controllers/controller.js');
-// // app.use('/', routes);
-app.get('/', function (req, res) {
-  res.render('index');
-});
-
 // static files under public folder need express setup
 app.use(express.static(__dirname + '/public'));
 
-// Listening on PORT
-app.listen(PORT, function () {
-  console.log('App listening on port', PORT);
+// Sets up ROUTES
+// app.get('/', function (req, res) {
+//   res.render('index');
+// });
+require('./routes/html-routes.js')(app);
+require('./routes/api-routes.js')(app);
+
+// Listening on PORT, Syncing Sequelize models and starting Express app
+db.sequelize.sync({
+  force: true
+}).then(function () {
+  app.listen(PORT, function () {
+    console.log("App listening on PORT " + PORT);
+  });
 });
