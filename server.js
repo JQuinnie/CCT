@@ -10,10 +10,14 @@ const PORT = process.env.PORT || 4000;
 var db = require('./models');
 
 // Sets up the Express app to handle data parsing
-app.use(bodyParser.urlencoded({
-  extended: false
-}));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(bodyParser.text());
+app.use(bodyParser.json({
+  type: "application/vnd.api+json"
+}));
 
 // Sets up Express to use handlebars
 const exphbs = require('express-handlebars');
