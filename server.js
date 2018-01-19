@@ -26,6 +26,6 @@ app.use('/', routes);
 app.use(express.static(__dirname + '/public'));
 
 // Listening on PORT
-app.listen(PORT, function () {
+app.listen(PORT, function() {
   console.log('App listening on port', PORT);
 });
