@@ -6,6 +6,9 @@ const bodyParser = require('body-parser');
 const app = express();
 const PORT = process.env.PORT || 4000;
 
+// Requiring mdoels for syncing
+var db = require('./models');
+
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({
   extended: false
