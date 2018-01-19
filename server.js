@@ -20,12 +20,16 @@ app.engine('handlebars', exphbs({
 app.set('view engine', 'handlebars');
 
 // Sets up routes
-const routes = require('./controllers/controller.js');
-app.use('/', routes);
+// // const routes = require('./controllers/controller.js');
+// // app.use('/', routes);
+app.get('/', function (req, res) {
+  res.render('index');
+});
+
 // static files under public folder need express setup
 app.use(express.static(__dirname + '/public'));
 
 // Listening on PORT
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log('App listening on port', PORT);
 });
