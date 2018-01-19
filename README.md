@@ -5,4 +5,4 @@ This is the 2nd project for UTBC.
 - JQuinnie: Jenn Chu
 - Fernandofuentes: Fernando Fuentes
 - Rath38: Alex Robinson
-- Lanrefaj: Lanre Fajimolu
+- Batlijo: Batli Joselevitz
