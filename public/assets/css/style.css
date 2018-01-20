@@ -1490,10 +1490,12 @@ a:focus, a:hover {
 .team-member .member-photo {
   overflow: hidden;
   position: relative;
+  padding: 20px
 }
 
 .team-member .member-photo img {
   transition: all 0.6s ease 0s;
+  border: 1px solid #aaaaaa;
 }
 
 /*=================================================================
