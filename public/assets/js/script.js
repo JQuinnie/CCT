@@ -5,8 +5,8 @@
 
 /*	Page Preloader */
 
-$(window).on("load", function() {
-  $('#preloader').fadeOut('slow', function() {
-    $(this).remove();
-  });
-});
+// $(window).on("load", function() {
+//   $('#preloader').fadeOut('slow', function() {
+//     $(this).remove();
+//   });
+// });
