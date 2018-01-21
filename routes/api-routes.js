@@ -6,10 +6,16 @@ var db = require('../models');
 // Setting up routes
 module.exports = function (app) {
 
-  // GET route for getting all of the different cryptocoin data
+  // GET route for getting all of the different cryptocoin and user data
   //db.findAll
   app.get('/api/coins', function (req, res) {
     db.Coins.findAll({}).then(function (result) {
+      res.json(result);
+    });
+  });
+
+  app.get('/api/user', function (req, res) {
+    db.User.findAll({}).then(function (result) {
       res.json(result);
     });
   });
