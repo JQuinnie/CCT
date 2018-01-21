@@ -18,10 +18,16 @@ module.exports = function (sequelize, DataTypes) {
     },
     password: {
       type: DataTypes.STRING
+    },
+    fav1: {
+      type: DataTypes.STRING
+    },
+    fav2: {
+      type: DataTypes.STRING
+    },
+    fav3: {
+      type: DataTypes.STRING
     }
-    // coin_collection: {
-    //   type: DataTypes.ARRAY(DataTypes.STRING)
-    // }
   });
 
   // placeholder data for the database
@@ -33,14 +39,15 @@ module.exports = function (sequelize, DataTypes) {
         last_name: 'Doe',
         email: 'john@doe.com',
         password: 'john',
-        //coin_collection: ['bitcoin', 'ethereum']
+        fav1: 'bitcoin',
+        fav2: 'ethereum'
       },
       {
         first_name: 'Jane',
         last_name: 'Doe',
         email: 'jane@doe.com',
         password: 'jane',
-        //coin_collection: ['ripple']
+        fav1: 'ripple'
       }
     ])
   })
