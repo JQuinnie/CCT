@@ -16,6 +16,15 @@ module.exports = function (app) {
 
   // GET route for retrieving data on a single cyptocoin
   //db.findOne
+  app.get('/api/coins/:id', function (req, res) {
+    db.Coins.findOne({
+      where: {
+        coin_id: req.params.id
+      }
+    }).then(function (result) {
+      res.json(result);
+    })
+  });
 
   // GET route for retrieving data of all cyptocoins a user is tracking
   //db.findAll where:query include:userId
