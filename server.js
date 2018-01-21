@@ -35,6 +35,7 @@ app.use(express.static(__dirname + '/public'));
 // });
 require('./routes/html-routes.js')(app);
 require('./routes/api-routes.js')(app);
+require('./routes/user-routes.js')(app);
 
 // Listening on PORT, Syncing Sequelize models and starting Express app
 db.sequelize.sync({
