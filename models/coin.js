@@ -26,8 +26,24 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.DECIMAL(13, 0)
     },
     percent_change_24h: {
-      type: DataTypes.DECIMAL(2, 2)
+      type: DataTypes.DECIMAL(11, 2)
     }
   });
+
+  // placeholder data for the database
+  Coins.sync({
+    force: true
+  }).then(function () {
+    return Coins.create({
+      coin_id: 'bitcoin',
+      name: 'Bitcoin',
+      symbol: 'BTC',
+      rank: 1,
+      price_usd: 12725.10,
+      total_supply: 213983690962,
+      percent_change_24h: 7.08
+    })
+  })
+
   return Coins;
 }
