@@ -18,6 +18,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
+.sub-container-divider {
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
+
 /*=== MEDIA QUERY ===*/
 
 .no-padding {
@@ -1872,13 +1877,13 @@ h2 {
 
 .btn-info {
   color: #fff;
-  background-color: rgba(222, 111, 29, 0.87)!important;
+  background-color: rgba(222, 111, 29, 0.87) !important;
   border-color: none;
 }
 
 .btn-info:hover {
   color: #fff;
-  background-color: rgba(222, 111, 29, 1)!important;
+  background-color: rgba(222, 111, 29, 1) !important;
   /* border-color: #17a2b8; */
 }
 
