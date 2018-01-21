@@ -31,10 +31,10 @@ module.exports = function (sequelize, DataTypes) {
   });
 
   // placeholder data for the database
-  Coins.sync({
+  sequelize.sync({
     force: true
   }).then(function () {
-    return Coins.bulkCreate([{
+    Coins.bulkCreate([{
         coin_id: 'bitcoin',
         name: 'Bitcoin',
         symbol: 'BTC',
