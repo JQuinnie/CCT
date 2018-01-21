@@ -8,6 +8,11 @@ module.exports = function (app) {
 
   // GET route for getting all of the different cryptocoin data
   //db.findAll
+  app.get('/api/coins', function (req, res) {
+    db.Coins.findAll({}).then(function (result) {
+      res.json(result);
+    });
+  });
 
   // GET route for retrieving data on a single cyptocoin
   //db.findOne
