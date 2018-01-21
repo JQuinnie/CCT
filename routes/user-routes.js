@@ -28,18 +28,7 @@ module.exports = function (app) {
 
   // GET route for retrieving data of all cyptocoins a user is tracking
   //db.findAll where:query include:userId
-  app.get('/api/user/fav/:id', function (req, res) {
-    db.User.findAll({
-      where: {
-        id: req.params.id,
-      },
-      attributes: {
-        include: ['fav1', 'fav2', 'fav3']
-      }
-    }).then(function (result) {
-      res.json(result);
-    })
-  })
+  //should you use sequelize to generate search of user# with fav1, fav2, fav3 or just use jquery to pull out the info request of an user#?
 
   // POST/PUT route for saving a cyptocoin for user to track
   //db.create
