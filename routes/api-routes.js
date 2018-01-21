@@ -6,16 +6,10 @@ var db = require('../models');
 // Setting up routes
 module.exports = function (app) {
 
-  // GET route for getting all of the different cryptocoin and user data
+  // GET route for getting all of the different cryptocoin data
   //db.findAll
   app.get('/api/coins', function (req, res) {
     db.Coins.findAll({}).then(function (result) {
-      res.json(result);
-    });
-  });
-
-  app.get('/api/user', function (req, res) {
-    db.User.findAll({}).then(function (result) {
       res.json(result);
     });
   });
@@ -31,14 +25,5 @@ module.exports = function (app) {
       res.json(result);
     })
   });
-
-  // GET route for retrieving data of all cyptocoins a user is tracking
-  //db.findAll where:query include:userId
-
-  // POST/PUT route for saving a cyptocoin for user to track
-  //db.create
-
-  // DELETE route for deleting a cyptocoin for user to track
-  //db.destroy
 
 }
