@@ -13,5 +13,7 @@ module.exports = function (app, passport) {
 
   // add route for getting user page
   app.get('/user', authController.dashboard);
+  // add route to log user out
+  app.get('/logout', authController.logout);
 
 }
