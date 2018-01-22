@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 const session = require('express-session');
+const env = require('dotenv').load();
 
 // Create Express server and set the PORT
 const app = express();
@@ -41,9 +42,6 @@ app.set('view engine', 'handlebars');
 app.use(express.static(__dirname + '/public'));
 
 // Sets up ROUTES
-// app.get('/', function (req, res) {
-//   res.render('index');
-// });
 require('./routes/html-routes.js')(app);
 require('./routes/api-routes.js')(app);
 require('./routes/user-routes.js')(app);
