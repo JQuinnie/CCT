@@ -7,17 +7,29 @@ module.exports = function (sequelize, DataTypes) {
       autoIncrement: true,
       primaryKey: true
     },
-    first_name: {
-      type: DataTypes.STRING
+    firstname: {
+      type: DataTypes.STRING,
+      notEmpty: true
     },
-    last_name: {
-      type: DataTypes.STRING
+    lastname: {
+      type: DataTypes.STRING,
+      notEmpty: true
+    },
+    username: {
+      type: DataTypes.TEXT
     },
     email: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      validate: {
+        isEmail: true
+      }
     },
     password: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    last_login: {
+      type: DataTypes.DATE
     },
     fav1: {
       type: DataTypes.STRING
@@ -35,16 +47,18 @@ module.exports = function (sequelize, DataTypes) {
     force: true
   }).then(function () {
     User.bulkCreate([{
-        first_name: 'John',
-        last_name: 'Doe',
+        firstname: 'John',
+        lastname: 'Doe',
+        username: 'johndoe',
         email: 'john@doe.com',
         password: 'john',
         fav1: 'bitcoin',
         fav2: 'ethereum'
       },
       {
-        first_name: 'Jane',
-        last_name: 'Doe',
+        firstname: 'Jane',
+        lastname: 'Doe',
+        username: 'janedoe',
         email: 'jane@doe.com',
         password: 'jane',
         fav1: 'ripple'
