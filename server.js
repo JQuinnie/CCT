@@ -45,7 +45,10 @@ app.use(express.static(__dirname + '/public'));
 require('./routes/html-routes.js')(app);
 require('./routes/api-routes.js')(app);
 require('./routes/user-routes.js')(app);
-var authRoute = require('./routes/auth.js')(app);
+var authRoute = require('./routes/auth.js')(app, passport);
+
+// load passport strategies
+require('./config/passport.js')(passport, db.user);
 
 // Listening on PORT, Syncing Sequelize models and starting Express app
 db.sequelize.sync({
