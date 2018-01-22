@@ -3,4 +3,5 @@ var authController = require('../controllers/authcontroller.js');
 
 module.exports = function (app) {
   app.get('/registration', authController.signup);
+  app.get('/login', authController.signin);
 }
