@@ -8,3 +8,7 @@ exports.signup = function (req, res) {
 exports.signin = function (req, res) {
   res.render('login');
 }
+
+exports.dashboard = function (req, res) {
+  res.render('user');
+}

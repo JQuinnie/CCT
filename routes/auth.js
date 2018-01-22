@@ -10,4 +10,8 @@ module.exports = function (app, passport) {
     successRedirect: '/user',
     failureRedirect: '/login'
   }));
+
+  // add route for getting user page
+  app.get('/user', authController.dashboard);
+
 }
