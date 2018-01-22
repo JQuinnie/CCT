@@ -48,4 +48,21 @@ module.exports = function (passport, user) {
       });
     }
   ));
+
+  //serialize to save user ID in session
+  passport.serializeUser(function (test, done) {
+    done(null, test.id)
+  });
+
+  // deserialize user remove user ID in session
+  passport.deserializeUser(function (id, done) {
+    db.User.findById(id).then(function (test) {
+      if (test) {
+        done(null, test.get());
+      } else {
+        done(test.errors, null);
+      }
+    });
+  });
+
 }
