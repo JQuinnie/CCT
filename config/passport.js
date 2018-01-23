@@ -33,7 +33,8 @@ module.exports = function (passport, user) {
             email: email,
             password: userPassword,
             firstname: req.body.firstname,
-            lastname: req.body.lastname
+            lastname: req.body.lastname,
+            username: req.body.username
           };
           // add new user if email not found
           db.User.create(data).then(function (newUser, created) {
@@ -50,17 +51,19 @@ module.exports = function (passport, user) {
   ));
 
   //serialize to save user ID in session
-  passport.serializeUser(function (test, done) {
-    done(null, test.id)
+  passport.serializeUser(function (user, done) {
+    console.log('user serialized');
+    done(null, user.id);
   });
 
   // deserialize user remove user ID in session
   passport.deserializeUser(function (id, done) {
-    db.User.findById(id).then(function (test) {
-      if (test) {
-        done(null, test.get());
+    db.User.findById(id).then(function (user) {
+      if (user) {
+        console.log('user deserialized');
+        done(null, user.get());
       } else {
-        done(test.errors, null);
+        done(user.errors, null);
       }
     });
   });
