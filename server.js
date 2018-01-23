@@ -52,7 +52,7 @@ require('./config/passport.js')(passport, db.user);
 
 // Listening on PORT, Syncing Sequelize models and starting Express app
 db.sequelize.sync({
-  force: true
+  force: true // true will drop database
 }).then(function () {
   app.listen(PORT, function (err) {
     if (!err) {
