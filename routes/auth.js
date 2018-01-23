@@ -27,4 +27,10 @@ module.exports = function (app, passport) {
   // add route to log user out
   app.get('/logout', authController.logout);
 
+  // add route for posting to signin page
+  app.post('/login', passport.authenticate('local-signin', {
+    successRedirect: '/dashboard',
+    failureRedirect: '/login'
+  }));
+
 }
