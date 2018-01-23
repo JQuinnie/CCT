@@ -10,7 +10,7 @@ exports.signin = function (req, res) {
 }
 
 exports.dashboard = function (req, res) {
-  res.render('user');
+  res.render('dashboard');
 }
 
 exports.logout = function (req, res) {
