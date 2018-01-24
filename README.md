@@ -7,5 +7,6 @@ This is the 2nd project for UTBC.
 - Rath38: Alex Robinson
 - Batlijo: Batli Joselevitz
 
-
-Testing Atom
+PROJECT PROPOSAL:
+Our project is a Cryptocurrency Tracker that collects various cryptocurrency data using specific API's.
+User logs in for authentication and they can add cryptocurrency symbols to their account and keep track of live stats. User will be able to select and save different cryptocurrencies they would like to keep track of. User can also request notifications when the price of cryptocurrency increases or decreases, and any other significant indicators in the cryptocurrency market.
