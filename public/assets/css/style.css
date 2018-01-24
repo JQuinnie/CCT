@@ -324,10 +324,10 @@ a:focus, a:hover {
   background: #ffffff;
 }
 
-/* .navbar-inverse {
+.navbar-inverse {
   background-color: #ffffff;
   border: none;
-} */
+}
 
 .navigation .navbar-nav>li.active a {
   color: #222222;
@@ -342,24 +342,67 @@ a:focus, a:hover {
   transition: .2s ease-in-out 0s;
 }
 
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  border-color: none;
+}
+
+.btn-primary {
+  margin-right: 10px;
+}
+
+/* NAVE ICON MENU DROPDOWN */
+
+button.navbar-toggle.collapsed {
+  margin: 23px;
+}
+
+button.navbar-toggle {
+  border-color: #333;
+  margin: 23px;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+
+/* END */
+
 @media (max-width: 480px) {
   .navigation .navbar-nav>li>a {
     padding: 8px 0 !important;
   }
-  /* .navbar-inverse {
+  .navbar-inverse {
     background-color: #ffffff;
     border: none;
-  } */
+  }
+  .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-inverse .navbar-collapse .btn-primary, .navbar-inverse .navbar-form .btn-primary, .navbar-inverse .navbar-collapse .btn-success, .navbar-inverse .navbar-form .btn-success {
+    color: #fff;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 60px;
+  }
+}
+
+.btn-success {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
 }
 
 @media (max-width: 768px) {
   .navigation .navbar-nav>li>a {
     padding: 8px 0 !important;
   }
-  /* .navbar-inverse {
+  .navbar-inverse {
     background-color: #ffffff;
     border: none;
-  } */
+  }
 }
 
 .navigation .navbar-nav>li>a:hover, .navigation .navbar-nav>li>a:active, .navigation .navbar-nav>li>a:focus {
@@ -372,6 +415,23 @@ a:focus, a:hover {
   font-size: 30px;
   cursor: pointer;
   outline: none;
+}
+
+.navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  background-color: #009999;
+  background-image: none;
+  border: 0px solid transparent;
+  border-radius: 4px;
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+  background-color: #cc6633;
 }
 
 .navigation .nav .open>a {
@@ -434,7 +494,7 @@ a:focus, a:hover {
   vertical-align: middle;
   text-align: center;
   border-style: none;
-  height: 56px;
+  height: 64px;
   width: auto;
   text-align: center;
   margin-left: 20px;
@@ -446,7 +506,21 @@ a:focus, a:hover {
   text-align: center;
 }
 
-/* CURENCY STATUS */
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  border-color: transparent;
+}
+
+.navbar-inverse .navbar-collapse {
+  border-color: transparent;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  border-color: transparent;
+  padding: 10px;
+}
+
+/* CURENCY STATUS
+*************************************************/
 
 .currency-status {
   text-align: center;
