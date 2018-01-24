@@ -19,8 +19,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sub-container-divider {
-  margin-top: 200px;
-  margin-bottom: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 /*=== MEDIA QUERY ===*/
@@ -839,6 +839,25 @@ h2 {
 }
 
 /* SUB PAGES */
+
+.subpage {
+  padding: 50px 0;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-image: url("../images/slider/slider-bg-2.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  margin-top: 73px;
+}
 
 .subpage h1 {
   color: #ffffff;
