@@ -1,3 +1,4 @@
+/********** CRYPTOTRACKER APP **********/
 // Setting up app dependencies
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -49,6 +50,9 @@ var authRoute = require('./routes/auth.js')(app, passport);
 
 // load passport strategies
 require('./config/passport.js')(passport, db.user);
+// load coinmarket API data into mysql
+const coinDataAPI = require('./config/coinmarket.js');
+coinDataAPI.coinData();
 
 // Listening on PORT, Syncing Sequelize models and starting Express app
 db.sequelize.sync({

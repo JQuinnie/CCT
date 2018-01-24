@@ -7,9 +7,6 @@ module.exports = function (sequelize, DataTypes) {
       autoIncrement: true,
       primaryKey: true
     },
-    coin_id: {
-      type: DataTypes.STRING
-    },
     name: {
       type: DataTypes.STRING
     },
@@ -29,40 +26,6 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.DECIMAL(11, 2)
     }
   });
-
-  // placeholder data for the database
-  sequelize.sync({
-    force: true
-  }).then(function () {
-    Coins.bulkCreate([{
-        coin_id: 'bitcoin',
-        name: 'Bitcoin',
-        symbol: 'BTC',
-        rank: 1,
-        price_usd: 12725.10,
-        total_supply: 213983690962,
-        percent_change_24h: 7.08
-      },
-      {
-        coin_id: 'ethereum',
-        name: 'Ethereum',
-        symbol: 'ETH',
-        rank: 2,
-        price_usd: 1138.96,
-        total_supply: 110605032646,
-        percent_change_24h: 6.29
-      },
-      {
-        coin_id: 'ripple',
-        name: 'Ripple',
-        symbol: 'XRP',
-        rank: 3,
-        price_usd: 1.54619,
-        total_supply: 59898075223,
-        percent_change_24h: 1.31
-      }
-    ])
-  })
 
   return Coins;
 }

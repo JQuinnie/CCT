@@ -59,7 +59,7 @@ module.exports = function (app) {
   app.get('/api/coins/:id', function (req, res) {
     db.Coins.findOne({
       where: {
-        coin_id: req.params.id
+        id: req.params.id
       }
     }).then(function (result) {
       res.json(result);
