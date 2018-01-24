@@ -1,10 +1,46 @@
+<!-- Subpage Banner -->
+<section class="subpage">
+   <div class="container">
+      <div class="row">
+        <div class="col-span-12 text-center">
+         <h1 style="subpage-heading">Dashboard</h1>
+       </div>
+      </div>
+   </div>
+</section>
+
 <div class="container sub-container-divider">
    <div class="row">
       <div class="col-12">
-         <h1>User Page</h1>
-         <h2>Dashboard</h2>
-         <h5>Hurray! you are logged in.</h5>
-         <button onclick='/logout' id='logout' class="float-left submit-button">Logout</button>
+         <h2>Welcome [ USER ]!</h2>
+         <h3>****** DISPLAY USER TABLE HERE ******</h3>
+         <a href="/logout"><button  id='logout' class="float-left submit-button">Logout</button></a>
       </div>
    </div>
 </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h2 class="panel-title">Tracker</h2>
+              </div>
+              <div class="panel-body">
+            <table class="table table-hover" id="coin-tracker">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Symbol</th>
+                  <th>rank</th>
+                  <th>Price</th>
+                  <th>Market Cap</th>
+                  <th>Percent Change(24h)</th>
+                </tr> 
+              </thead>
+              <tbody>               
+              </tbody>              
+            </table>
+              </div>
+            </div>
+          </div>
+        </div>
