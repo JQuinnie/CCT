@@ -14,9 +14,9 @@ module.exports = function (app) {
     });
   });
 
+
   // GET route for retrieving data on a single cyptocoin
   //db.findOne
-<<<<<<< HEAD
 
   // GET route for retrieving data of all cyptocoins a user is tracking
   //db.findAll where:query include:userId
@@ -55,7 +55,7 @@ module.exports = function (app) {
 
   // DELETE route for deleting a cyptocoin for user to track
   //db.destroy
-=======
+
   app.get('/api/coins/:id', function (req, res) {
     db.Coins.findOne({
       where: {
@@ -65,7 +65,6 @@ module.exports = function (app) {
       res.json(result);
     })
   });
->>>>>>> 8414bc2e79200266274c17e6ebedb24542788d60
 
   app.post("/api/deletecoin", function(req, res) {
 
