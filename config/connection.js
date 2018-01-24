@@ -9,13 +9,13 @@ if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'mysqlpw!',
+    password: 'sostfffs2FF!',
     database: 'crypto_db'
   })
 }
 
 // establishing connection
-connection.connect(function (err) {
+connection.connect(function(err) {
   if (err) {
     console.error('Connection error: ' + err.stack);
   };
