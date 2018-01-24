@@ -21,4 +21,8 @@ module.exports = function(app) {
   app.get("/registration", function(req, res) {
     res.render("registration");
   })
+  // route for actual API TEST
+  app.get("/apiTest", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/test/test-server.js"));
+  })
 };

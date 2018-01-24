@@ -1,6 +1,9 @@
 // Setting up app dependencies
 const express = require('express');
 const bodyParser = require('body-parser');
+const passport = require('passport');
+const session = require('express-session');
+const env = require('dotenv').load();
 
 // Create Express server and set the PORT
 const app = express();
@@ -19,6 +22,15 @@ app.use(bodyParser.json({
   type: "application/vnd.api+json"
 }));
 
+// Set up middleware: passport and express session
+app.use(session({
+  secret: 'somethingsecretive',
+  resave: true,
+  saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+
 // Sets up Express to use handlebars
 const exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({
@@ -30,17 +42,23 @@ app.set('view engine', 'handlebars');
 app.use(express.static(__dirname + '/public'));
 
 // Sets up ROUTES
-// app.get('/', function (req, res) {
-//   res.render('index');
-// });
 require('./routes/html-routes.js')(app);
 require('./routes/api-routes.js')(app);
+require('./routes/user-routes.js')(app);
+var authRoute = require('./routes/auth.js')(app, passport);
+
+// load passport strategies
+require('./config/passport.js')(passport, db.user);
 
 // Listening on PORT, Syncing Sequelize models and starting Express app
 db.sequelize.sync({
-  force: true
-}).then(function() {
-  app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
+  force: true // true will drop database
+}).then(function () {
+  app.listen(PORT, function (err) {
+    if (!err) {
+      console.log("App listening on PORT " + PORT);
+    } else {
+      console.log(err);
+    }
   });
 });
