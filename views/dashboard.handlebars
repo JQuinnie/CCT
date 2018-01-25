@@ -12,7 +12,7 @@
 <div class="container sub-container-divider">
 	<div class="row">
 		<div class="col-12">
-			<h2>Welcome [ USER ]!</h2>
+			<h2>Welcome To CryptoCurrency Tracker!</h2>
 			<a href="/logout">
 				<button id='logout' class="float-left submit-button">Logout</button>
 			</a>
@@ -21,26 +21,25 @@
 			<table class="table">
 				<thead>
 					<tr>
-						<th scope="col">#</th>
-						<th scope="col">Name</th>
-						<th scope="col">Symbol</th>
-						<th scope="col">Rank</th>
-						<th scope="col">Price (USD)</th>
-						<th scope="col">Total Supply</th>
-						<th scope="col">% Change 24HR</th>
+						<th scope="col">First Name</th>
+						<th scope="col">Last Name</th>
+						<th scope="col">Username</th>
+						<th scope="col">fav1</th>
+						<th scope="col">fav2</th>
+						<th scope="col">fav3</th>
 					</tr>
 				</thead>
 				<tbody>
+					{{#each userData}}
 					<tr>
-						<th scope='row'>1</th>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
+						<td>{{this.firstname}}</td>
+						<td>{{this.lastname}}</td>
+						<td>{{this.username}}</td>
+						<td>{{this.fav1}}</td>
+						<td>{{this.fav2}}</td>
+						<td>{{this.fav3}}</td>
 					</tr>
+					{{/each}}
 				</tbody>
 			</table>
 		</div>
@@ -48,27 +47,27 @@
 </div>
 
 <div class="row">
-   <div class="col-md-12">
-      <div class="panel panel-primary">
-         <div class="panel-heading">
-            <h2 class="panel-title">Tracker</h2>
-         </div>
-         <div class="panel-body">
-            <table class="table table-hover" id="coin-tracker">
-               <thead>
-                  <tr>
-                     <th>Name</th>
-                     <th>Symbol</th>
-                     <th>rank</th>
-                     <th>Price</th>
-                     <th>Market Cap</th>
-                     <th>Percent Change(24h)</th>
-                  </tr>
-               </thead>
-               <tbody>
-               </tbody>
-            </table>
-         </div>
-      </div>
-   </div>
+	<div class="col-md-12">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h2 class="panel-title">Tracker</h2>
+			</div>
+			<div class="panel-body">
+				<table class="table table-hover" id="coin-tracker">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Symbol</th>
+							<th>rank</th>
+							<th>Price</th>
+							<th>Market Cap</th>
+							<th>Percent Change(24h)</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
 </div>
