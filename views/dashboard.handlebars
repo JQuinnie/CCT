@@ -8,17 +8,23 @@
 		</div>
 	</div>
 </section>
-
+<!-- USER CONTAINER -->
 <div class="container sub-container-divider">
 	<div class="row">
-		<div class="col-12">
-			<h2>Welcome [ USER ]!</h2>
+		<div class="col-lg-8 user-section">
+			<h2>Welcome! <span id="userName">{{User}}</span></h2>
+		</div>
+		<div class="col-lg-4 text-right">
 			<a href="/logout">
 				<button id='logout' class="float-left submit-button">Logout</button>
 			</a>
 		</div>
+	</div>
+
+	<!-- USER TABLE OF CHOICES -->
+	<div class="row">
 		<div class='col-12'>
-			<table class="table">
+			<table class="table user-table">
 				<thead>
 					<tr>
 						<th scope="col">#</th>
@@ -47,28 +53,40 @@
 	</div>
 </div>
 
-<div class="row">
-   <div class="col-md-12">
-      <div class="panel panel-primary">
-         <div class="panel-heading">
-            <h2 class="panel-title">Tracker</h2>
-         </div>
-         <div class="panel-body">
-            <table class="table table-hover" id="coin-tracker">
-               <thead>
-                  <tr>
-                     <th>Name</th>
-                     <th>Symbol</th>
-                     <th>rank</th>
-                     <th>Price</th>
-                     <th>Market Cap</th>
-                     <th>Percent Change(24h)</th>
-                  </tr>
-               </thead>
-               <tbody>
-               </tbody>
-            </table>
-         </div>
-      </div>
-   </div>
+<!-- COIN TRACKER CONTAINER -->
+<div class="container">
+	<div class="row">
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-2 text-center top-cc">
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-8 text-center top-cc">
+			<h2>TOP Cryptocurencys World Wide</h2>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-2 text-center top-cc">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h2 class="panel-title">Tracker</h2>
+				</div>
+				<div class="panel-body">
+					<table class="table table-hover" id="coin-tracker">
+						<thead>
+							<tr>
+								<th class="th-name">Name</th>
+								<th class="th-symbol">Symbol</th>
+								<th class="th-rank">rank</th>
+								<th class="th-price">Price</th>
+								<th class="th-market">Market Cap</th>
+								<th class="th-percent-change">Percent Change(24h)</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

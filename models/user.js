@@ -67,4 +67,6 @@ module.exports = function (sequelize, DataTypes) {
   })
 
   return User;
+
+  document.getElementById("userName").innerHTML += User["id"];
 }
