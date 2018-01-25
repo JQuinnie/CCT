@@ -1,5 +1,5 @@
 // setting up routes for authorization
-var authController = require('../controllers/authcontroller.js');
+const authController = require('../controllers/authcontroller.js');
 
 module.exports = function (app, passport) {
   app.get('/registration', authController.signup);
