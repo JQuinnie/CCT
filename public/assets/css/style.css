@@ -950,7 +950,7 @@ h2 {
   color: #ffffff;
 }
 
-/* USER PAGE */
+/* Dashboard PAGE */
 
 button#logout {
   background-color: darkred;
@@ -974,4 +974,11 @@ table.table.user-table {
   background: #efefef;
   /* padding: 14px!important; */
   margin: 20px 0;
+}
+
+span.welcome {
+  font-size: 25px;
+  /* text-transform: capitalize!important; */
+  text-transform: uppercase;
+  font-weight: 900;
 }
