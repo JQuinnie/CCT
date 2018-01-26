@@ -237,6 +237,16 @@ a:focus, a:hover {
   height: 25px;
 }
 
+.container-fluid.black-container {
+  background-color: #222222;
+  height: 25px;
+}
+
+.container-fluid.green-container {
+  background-color: #008391;
+  height: 25px;
+}
+
 .commonTab .nav-tabs {
   border: 1px solid transparent;
   text-align: center;
@@ -587,7 +597,7 @@ button.navbar-toggle {
   background-size: cover;
   background-attachment: fixed;
   position: relative;
-  margin-top: 73px;
+  /* margin-top: 73px; */
 }
 
 @media (max-width: 480px) {
