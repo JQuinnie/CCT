@@ -224,6 +224,19 @@ a:focus, a:hover {
   outline: none;
 }
 
+.navbar {
+  position: relative;
+  min-height: 50px;
+  /* margin-bottom: 20px;  */
+  margin-bottom: 0px;
+  border: 1px solid transparent;
+}
+
+.container-fluid.green-container {
+  background-color: #008391;
+  height: 25px;
+}
+
 .commonTab .nav-tabs {
   border: 1px solid transparent;
   text-align: center;
