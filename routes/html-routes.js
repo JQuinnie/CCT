@@ -11,13 +11,21 @@ module.exports = function (app) {
     res.render('index');
   })
   // user route loads user.handlebars
-  app.get("/dashboard", function (req, res) {
-    db.User.findAll({}).then(function (result) {
-      res.render('dashboard', {
-        userData: result
+  app.get("/dashboard/:id?", function (req, res) {
+    db.User.findOne({
+      where: {
+        id: req.params.id // gets current user id
+      }
+    }).then(function (users) {
+      db.Coins.findAll({}).then(function (coins) {
+        res.render('dashboard', {
+          userData: users, // sets user data for front end use
+          coinData: coins // sets user data for front end use
+        })
       })
     });
-  })
+  });
+
   // login route loads login.handlebars
   app.get("/login", function (req, res) {
     res.render("login");

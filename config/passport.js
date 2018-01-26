@@ -1,6 +1,6 @@
 // set up passport for user model and strategies
-var bCrypt = require('bcrypt-nodejs');
-var db = require('../models');
+const bCrypt = require('bcrypt-nodejs');
+const db = require('../models');
 
 module.exports = function (passport, user) {
   // local strategy
@@ -42,6 +42,7 @@ module.exports = function (passport, user) {
               return done(null, false);
             }
             if (newUser) {
+              console.log('NEW USER: ' + newUser.firstname + ', ID: ' + newUser.id); // pull data for new user
               return done(null, newUser);
             }
           });
@@ -97,6 +98,7 @@ module.exports = function (passport, user) {
         }
 
         var userinfo = user.get();
+        console.log('CURRENT USER: ' + userinfo.firstname) // pull data for current user
         return done(null, userinfo);
 
       }).catch(function (err) {

@@ -7,7 +7,7 @@ exports.coinData = function () {
   const coinmarketcap = new CoinMarketCap();
   const db = require('../models');
   // specifies number of coins to track
-  var coinCount = 50;
+  var coinCount = 25;
 
   // retrieve multiple coin info from API
   coinmarketcap.multi(coins => {
