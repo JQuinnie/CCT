@@ -982,3 +982,10 @@ span.welcome {
   text-transform: uppercase;
   font-weight: 900;
 }
+
+span#userName {
+  font-size: 3em;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #333333;
+}
