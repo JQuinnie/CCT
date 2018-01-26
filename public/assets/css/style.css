@@ -3,18 +3,19 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto:400,500,700,900");
 body {
   line-height: 1.4;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
 p {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #9a9a9a;
   font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", serif;
+  /* font-family: "Playfair Display", serif; */
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
 
@@ -213,7 +214,7 @@ a:focus, a:hover {
 .header-bradcrumb a, .header-bradcrumb .active {
   color: #cfcfcf;
   font-weight: 200;
-  font-family: "Playfair Display", serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .header-bradcrumb a:hover {
@@ -840,7 +841,7 @@ img.hero-image {
   letter-spacing: 1px;
   text-transform: capitalize;
   transition: color .3s;
-  font-family: "Playfair Display", serif;
+  font-family: 'Open Sans', sans-serif;
   display: block;
 }
 
