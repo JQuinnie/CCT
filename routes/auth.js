@@ -7,9 +7,10 @@ module.exports = function (app, passport) {
 
   // add route for posting to signup (registration page)
   app.post('/registration', passport.authenticate('local-signup', {
-    successRedirect: '/dashboard',
     failureRedirect: '/registration'
-  }));
+  }), function (req, res) {
+    res.redirect('/dashboard/' + req.session.passport.user); // gets user info
+  });
 
   // custom middleware to protect dashboard to users not logged in
   function isLoggedIn(req, res, next) {
@@ -29,8 +30,9 @@ module.exports = function (app, passport) {
 
   // add route for posting to signin page
   app.post('/login', passport.authenticate('local-signin', {
-    successRedirect: '/dashboard',
     failureRedirect: '/login'
-  }));
+  }), function (req, res) {
+    res.redirect('/dashboard/' + req.session.passport.user); // gets user info
+  });
 
 }

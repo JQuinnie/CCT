@@ -42,29 +42,29 @@ module.exports = function (sequelize, DataTypes) {
     }
   });
 
-  // placeholder data for the database
-  sequelize.sync({
-    force: true
-  }).then(function () {
-    User.bulkCreate([{
-        firstname: 'John',
-        lastname: 'Doe',
-        username: 'johndoe',
-        email: 'john@doe.com',
-        password: 'john',
-        fav1: 'bitcoin',
-        fav2: 'ethereum'
-      },
-      {
-        firstname: 'Jane',
-        lastname: 'Doe',
-        username: 'janedoe',
-        email: 'jane@doe.com',
-        password: 'jane',
-        fav1: 'ripple'
-      }
-    ])
-  })
+  // // placeholder data for the database
+  // sequelize.sync({
+  //   force: true
+  // }).then(function () {
+  //   User.bulkCreate([{
+  //       firstname: 'John',
+  //       lastname: 'Doe',
+  //       username: 'johndoe',
+  //       email: 'john@doe.com',
+  //       password: 'john',
+  //       fav1: 'bitcoin',
+  //       fav2: 'ethereum'
+  //     },
+  //     {
+  //       firstname: 'Jane',
+  //       lastname: 'Doe',
+  //       username: 'janedoe',
+  //       email: 'jane@doe.com',
+  //       password: 'jane',
+  //       fav1: 'ripple'
+  //     }
+  //   ])
+  // })
 
   return User;
 

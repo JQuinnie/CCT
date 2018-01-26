@@ -12,7 +12,9 @@
 <div class="container sub-container-divider">
 	<div class="row">
 		<div class="col-lg-8 user-section">
-			<h2>Welcome! <span id="userName">{{User}}</span></h2>
+			<h2>Welcome
+				<span id="userName">{{userData.firstname}}!</span>
+			</h2>
 		</div>
 		<div class="col-lg-4 text-right">
 			<a href="/logout">
@@ -21,7 +23,7 @@
 		</div>
 	</div>
 
-	<!-- USER TABLE OF CHOICES -->
+	<!-- USER TABLE FOR TESTING -->
 	<div class="row">
 		<div class='col-12'>
 			<table class="table user-table">
@@ -36,19 +38,95 @@
 					</tr>
 				</thead>
 				<tbody>
-					{{#each userData}}
 					<tr>
-						<td>{{this.firstname}}</td>
-						<td>{{this.lastname}}</td>
-						<td>{{this.username}}</td>
-						<td>{{this.fav1}}</td>
-						<td>{{this.fav2}}</td>
-						<td>{{this.fav3}}</td>
+						<td>{{userData.firstname}}</td>
+						<td>{{userData.lastname}}</td>
+						<td>{{userData.username}}</td>
+						<td>{{userData.fav1}}</td>
+						<td>{{userData.fav2}}</td>
+						<td>{{userData.fav3}}</td>
 					</tr>
-					{{/each}}
 				</tbody>
 			</table>
 		</div>
+	</div>
+</div>
+
+<!-- USER FAVE TABLE -->
+<div class='row'>
+	<div class='col-12'>
+		<table class='table user-table'>
+			<thead>
+				<tr>
+					<th scope="col">Favorite</th>
+					<th scope="col">Rank</th>
+					<th scope="col">Name</th>
+					<th scope="col">Symbol</th>
+					<th scope="col">Price (USD)</th>
+					<th scope="col">Total Supply</th>
+					<th scope="col">Percent Change (24H)</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>#1</td>
+					<td>{{coinData.0.rank}}</td>
+					<td>{{coinData.0.name}}</td>
+					<td>{{coinData.0.symbol}}</td>
+					<td>{{coinData.0.price_usd}}</td>
+					<td>{{coinData.0.total_supply}}</td>
+					<td>{{coinData.0.percent_change_24h}}</td>
+				</tr>
+				<tr>
+					<td>#2</td>
+					<td>{{coinData.1.rank}}</td>
+					<td>{{coinData.1.name}}</td>
+					<td>{{coinData.1.symbol}}</td>
+					<td>{{coinData.1.price_usd}}</td>
+					<td>{{coinData.1.total_supply}}</td>
+					<td>{{coinData.1.percent_change_24h}}</td>
+				</tr>
+				<tr>
+					<td>#3</td>
+					<td>{{coinData.2.rank}}</td>
+					<td>{{coinData.2.name}}</td>
+					<td>{{coinData.2.symbol}}</td>
+					<td>{{coinData.2.price_usd}}</td>
+					<td>{{coinData.2.total_supply}}</td>
+					<td>{{coinData.2.percent_change_24h}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<!-- USER TABLE OF CHOICES -->
+<div class="row">
+	<div class="col-12">
+		<table class="table user-table">
+			<thead>
+				<tr>
+					<th scope="col">Rank</th>
+					<th scope="col">Name</th>
+					<th scope="col">Symbol</th>
+					<th scope="col">Price (USD)</th>
+					<th scope="col">Total Supply</th>
+					<th scope="col">Percent Change (24H)</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each coinData}}
+				<tr>
+					<td>{{this.rank}}</td>
+					<td>{{this.name}}</td>
+					<td>{{this.symbol}}</td>
+					<td>{{this.price_usd}}</td>
+					<td>{{this.total_supply}}</td>
+					<td>{{this.percent_change_24h}}</td>
+				</tr>
+				{{/each}}
+			</tbody>
+		</table>
 	</div>
 </div>
 
