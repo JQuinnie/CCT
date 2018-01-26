@@ -1,3 +1,4 @@
+![alt text](http://unwrittenagency.com/wp-content/uploads/2018/01/cryptocurrency-logo-v3.png)
 # Project-2-Team-3
 This is the 2nd project for UTBC.
 
