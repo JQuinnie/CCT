@@ -52,14 +52,15 @@ var authRoute = require('./routes/auth.js')(app, passport);
 require('./config/passport.js')(passport, db.user);
 // load coinmarket API data into mysql
 const coinDataAPI = require('./config/coinmarket.js');
-coinDataAPI.coinData();
+
 
 // Listening on PORT, Syncing Sequelize models and starting Express app
 db.sequelize.sync({
   force: true // true will drop database
-}).then(function () {
-  app.listen(PORT, function (err) {
+}).then(function() {
+  app.listen(PORT, function(err) {
     if (!err) {
+      coinDataAPI.coinData();
       console.log("App listening on PORT " + PORT);
     } else {
       console.log(err);
