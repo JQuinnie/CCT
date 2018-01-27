@@ -894,6 +894,14 @@ footer h2 {
   color: #eeeeee;
 }
 
+.col-12.text-center.copyright {
+  padding: 25px 0;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+/* OTHER */
+
 .subscribe-form .form-control {
   border-radius: 0;
 }
