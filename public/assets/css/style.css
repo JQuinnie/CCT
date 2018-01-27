@@ -136,7 +136,9 @@ a:focus, a:hover {
 }
 
 .section-sm {
-  padding: 70px 0;
+  padding: 20px 0;
+  background-color: #D17535;
+  color: #ffffff;
 }
 
 .section-xs {
@@ -244,8 +246,8 @@ a:focus, a:hover {
 }
 
 .container-fluid.black-container {
-  background-color: #222222;
-  height: 25px;
+  background-color: #333333;
+  height: 4px;
 }
 
 .container-fluid.green-container {
@@ -729,8 +731,8 @@ img.hero-image {
 ==================================================================*/
 
 .counters-item {
-  padding-bottom: 30px;
-  color: #444;
+  padding-bottom: 0px;
+  color: #ffffff;
   position: relative;
   text-align: center;
 }
@@ -764,13 +766,17 @@ img.hero-image {
 .counters-item i {
   font-size: 40px;
   display: inline-block;
-  color: #31BB9E;
+  color: #dddddd;
 }
 
 .counters-item h3 {
   font-size: 18px;
   margin: 0;
-  color: #666;
+  color: #eeeeee;
+}
+
+.counters-item p {
+  color: #eeeeee;
 }
 
 /*=================================================================
