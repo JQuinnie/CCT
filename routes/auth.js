@@ -24,7 +24,7 @@ module.exports = function (app, passport) {
   };
 
   // add route for getting user page
-  app.get('/dashboard', isLoggedIn, authController.dashboard);
+  app.get('/dashboard/:id?', isLoggedIn, authController.dashboard); // original route /dashboard, which protects
   // add route to log user out
   app.get('/logout', authController.logout);
 
