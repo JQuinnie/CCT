@@ -410,7 +410,7 @@ button.navbar-toggle {
 }
 
 @media (max-width: 767px) {
-  .navbar-inverse .navbar-collapse .btn-primary, .navbar-inverse .navbar-form .btn-primary, .navbar-inverse .navbar-collapse .btn-success, .navbar-inverse .navbar-form .btn-success {
+  .navbar-inverse .navbar-collapse .btn-primary, .navbar-inverse .navbar-form .btn-primary, .navbar-inverse .navbar-collapse .btn-success, .navbar-inverse .navbar-form .btn-success, .navbar-inverse .navbar-collapse .btn-danger, .navbar-inverse .navbar-form .btn-danger {
     color: #fff;
     width: 100%;
     margin-bottom: 10px;
@@ -422,6 +422,7 @@ button.navbar-toggle {
   color: #fff;
   background-color: #5cb85c;
   border-color: #4cae4c;
+  margin-right: 10px;
 }
 
 @media (max-width: 768px) {
@@ -894,6 +895,14 @@ footer h2 {
   color: #eeeeee;
 }
 
+.col-12.text-center.copyright {
+  padding: 25px 0;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+/* OTHER */
+
 .subscribe-form .form-control {
   border-radius: 0;
 }
@@ -968,7 +977,7 @@ h2 {
 
 /* Dashboard PAGE */
 
-button#logout {
+button.btn-logout {
   background-color: darkred;
   padding: 10px 20px;
   margin: 25px 0;
