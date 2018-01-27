@@ -57,9 +57,9 @@ const coinDataAPI = require('./config/coinmarket.js');
 
 // Listening on PORT, Syncing Sequelize models and starting Express app
 db.sequelize.sync({
-  force: true // true will drop database
-}).then(function() {
-  app.listen(PORT, function(err) {
+  force: false // true will drop database
+}).then(function () {
+  app.listen(PORT, function (err) {
     if (!err) {
       coinDataAPI.coinData();
       console.log("App listening on PORT " + PORT);
