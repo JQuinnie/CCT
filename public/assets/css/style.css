@@ -411,7 +411,7 @@ button.navbar-toggle {
 
 @media (max-width: 767px) {
   .navbar-inverse .navbar-collapse .btn-primary, .navbar-inverse .navbar-form .btn-primary, .navbar-inverse .navbar-collapse .btn-success, .navbar-inverse .navbar-form .btn-success, .navbar-inverse .navbar-collapse .btn-danger, .navbar-inverse .navbar-form .btn-danger {
-    color: #fff;
+    color: #ffffff;
     width: 100%;
     margin-bottom: 10px;
     height: 60px;
@@ -547,6 +547,12 @@ button.navbar-toggle {
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
   border-color: transparent;
   padding: 10px;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form a {
+  border-color: transparent;
+  padding: 10px;
+  color: #ffffff;
 }
 
 /* CURENCY STATUS
