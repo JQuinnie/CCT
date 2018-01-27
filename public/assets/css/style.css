@@ -176,18 +176,6 @@ a:focus, a:hover {
   margin: 0 auto;
 }
 
-@media (max-width: 480px) {
-  .title p {
-    width: 80%;
-  }
-}
-
-@media (max-width: 768px) {
-  .title p {
-    width: 80%;
-  }
-}
-
 .title .border {
   display: inline-block;
   height: 6px;
@@ -687,6 +675,12 @@ img.hero-image {
     border: 2px solid #ffffff;
     width: 100%;
     margin: 0px 0 50px 0;
+  }
+}
+
+@media (max-width: 991px) {
+  img.hero-image {
+    margin-top: 40px;
   }
 }
 
