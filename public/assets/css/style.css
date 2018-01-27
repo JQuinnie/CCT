@@ -981,6 +981,17 @@ h2 {
   color: #ffffff;
 }
 
+/* CTA */
+
+.cta h2 {
+  color: #ffffff;
+}
+
+.col-md-12.text-center.cta img {
+  width: 60px;
+  margin-bottom: 25px;
+}
+
 /* Dashboard PAGE */
 
 button.btn-logout {
