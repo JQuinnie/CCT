@@ -2,11 +2,11 @@
 # A Simple Crytocurrency Tracker Web App
 
 # Team Members
-- JQuinnie: Jenn Chu
-- Fernandofuentes: Fernando Fuentes
-- Rath38: Alex Robinson
-- Batlijo: Batli Joselevitz
+- [Jenn Chu](https://github.com/JQuinnie) Full Stack Developer
+- [Fernando Fuentes](https://github.com/Fernandofuentes) Front End Developer
+- [Alex Robinson](https://github.com/Rath38) Back End Developer
+- [Batli Joselevitz](https://github.com/Batlijo) Back End Developer
 
-PROJECT PROPOSAL:
-Our project is a Cryptocurrency Tracker that collects various cryptocurrency data using specific API's.
+# Project Proposal
+Cryptocurrency Tracker that collects various cryptocurrency data using specific API's.
 User logs in for authentication and they can add cryptocurrency symbols to their account and keep track of live stats. User will be able to select and save different cryptocurrencies they would like to keep track of. User can also request notifications when the price of cryptocurrency increases or decreases, and any other significant indicators in the cryptocurrency market.
