@@ -1,8 +1,7 @@
 ![alt text](http://unwrittenagency.com/wp-content/uploads/2018/01/cryptocurrency-logo-v3.png)
-# Project-2-Team-3
-This is the 2nd project for UTBC.
+# A Simple Crytocurrency Tracker Web App
 
-# Team members
+# Team Members
 - JQuinnie: Jenn Chu
 - Fernandofuentes: Fernando Fuentes
 - Rath38: Alex Robinson
